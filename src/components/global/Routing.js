@@ -5,6 +5,8 @@ import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import { auth } from '../../firebase.js';
 import GuestHome from '../../screens/GuestHome';
 import UserHome from '../../screens/UserHome';
+import Login from '../../screens/Login';
+import Signup from '../../screens/Signup';
 import Navbar from './Navbar';
 
 export default function Routing() {
@@ -35,6 +37,8 @@ export default function Routing() {
             ) : (
                 <Routes>
                     <Route exact path='/' element={<GuestHome />} />
+                    <Route exact path="/login" element={<Login />} />
+                    <Route exact path="/signup" element={<Signup />} />
                 </Routes>
             )}
         </Router>
